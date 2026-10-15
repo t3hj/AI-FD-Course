@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Website - Responsive Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome for Icons if needed -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="header-wrapper">
+    <div class="container navbar">
+      <a href="index.html" class="logo">Header Logo</a>
+
+      <!-- CSS-Only Burger Menu Input Toggle -->
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+      <label for="menu-toggle" class="burger-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Header link one</a></li>
+        <li><a href="#about">Header link two</a></li>
+        <li><a href="#services">Header link three</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">This website is awesome</h1>
+          <p class="hero-subtitle">
+            This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.
+          </p>
+          <a href="#signup" class="btn-primary">Sign up</a>
+        </div>
+        
+        <div class="hero-image-container">
+          <!-- Responsive Image Component -->
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/500x280?text=Desktop+Hero+Image">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/400x240?text=Tablet+Hero+Image">
+            <img src="https://via.placeholder.com/320x200?text=Mobile+Hero+Image" alt="Hero illustration placeholder" class="responsive-hero-img">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="info-section">
+      <div class="container">
+        <h2 class="info-header">Some random information.</h2>
+        
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-box"></div>
+            <p class="info-text">this is some subtext under an illustration or image</p>
+          </div>
+          <div class="info-card">
+            <div class="info-box"></div>
+            <p class="info-text">this is some subtext under an illustration or image</p>
+          </div>
+          <div class="info-card">
+            <div class="info-box"></div>
+            <p class="info-text">this is some subtext under an illustration or image</p>
+          </div>
+          <div class="info-card">
+            <div class="info-box"></div>
+            <p class="info-text">this is some subtext under an illustration or image</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remaining 2/3 of the page (Quote Section, Call to Action, Footer, and additional pages) to be completed by teammates -->
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* ==========================================
+   1. Google Fonts & CSS Custom Properties
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+
+:root {
+  /* Client Palette & Typography Variables */
+  --bg-dark: #1F2937;
+  --bg-quote: #E5E7EB;
+  --text-main-light: #F9FAF8;
+  --text-secondary-light: #E5E7EB;
+  --text-dark: #1F2937;
+  --accent-blue: #3882F6;
+  
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* ==========================================
+   2. Reset & General Setup
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container for section alignments */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================
+   3. Header & Navigation (CSS-Only Burger Menu)
+   ========================================== */
+.header-wrapper {
+  background-color: var(--bg-dark);
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text-main-light);
+  text-decoration: none;
+}
+
+/* Hidden Checkbox Controller for Burger Menu */
+#menu-toggle {
+  display: none;
+}
+
+/* Burger Icon Toggle Switch */
+.burger-label {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger-label span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-main-light);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-size: 18px;
+  color: var(--text-secondary-light);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================
+   4. Hero Section
+   ========================================== */
+.hero-section {
+  background-color: var(--bg-dark);
+  padding: 80px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--text-main-light);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary-light);
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  padding: 10px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-image-container {
+  flex: 1;
+  background-color: #6d7783;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.hero-image-placeholder {
+  color: #e2e8f0;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ==========================================
+   5. Information Section
+   ========================================== */
+.info-section {
+  padding: 64px 0 96px;
+  text-align: center;
+}
+
+.info-header {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1;
+  min-width: 180px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-box {
+  width: 160px;
+  height: 160px;
+  border: 4px solid var(--accent-blue);
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.info-text {
+  font-size: 16px;
+  color: #555555;
+}
+
+/* ==========================================
+   6. Responsive Breakpoints (Media Queries)
+   ========================================== */
+
+/* Tablet & Mobile Layout Adaptations (< 768px) */
+@media (max-width: 768px) {
+  /* Burger Menu Logic */
+  .burger-label {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-dark);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* CSS Checkbox Hack: When checked, display the menu */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image-container {
+    width: 100%;
+  }
+}
+
+/* Mobile Screen Specifics (< 375px) */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .info-header {
+    font-size: 28px;
+  }
+}
